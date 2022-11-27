@@ -1,0 +1,104 @@
+---
+import placeholder from "../images/placholder.jpg";
+---
+
+<section class="section-about">
+  <h2 class="section__title">Despre noi</h2>
+  <div class="grid-of-2">
+    <div class="col-1">
+      <div>
+        <h3 class="sub-section__title">Cine suntem</h3>
+        <p class="paragraph">
+          “Floare de colt” este o fundatie ecologica infintata in cadrul Colegiului National “Mihai
+          Viteazul” cu scopul de a le introduce tinerilor un stil de viata sanatos si de a ii motiva
+          sa salveze Pamantul. Club s-a facut remarcat prin excursiile organizate pe munte, unde
+          adolescentii invata ce inseamna independenta si voita, de asemena si prin cotizatiile pe
+          care elevii le doneaza pentru salvarea mediul inconjurator. Ne ocupam cu reciclarea
+          hartiilor si a bateriilor, plantarea de copacei si florii in liceu, dar de asemenea
+          ajutarea copiilor ucrainieni care invata in incinta liceului.
+        </p>
+      </div>
+      <div>
+        <h3 class="sub-section__title">Misiunea noastră</h3>
+        <p class="paragraph">
+          Scopul nostru este sa aducem elevii si adolescentii mai aproape de natura, prin diferitele
+          actiuni si evenimente pe care le organizam: tabere, colectare de deseuri, etc. Astfel le
+          oferim sansa copiilor sa creeze o relatie cu natura si cu mediul inconjurator. Consideram
+          ca omul s-a nascut cu o conexiune fata de pamant, iar obiectivul nostru este sa o
+          intretinem si sa le aratam tutoror frumuseata naturii. Prin actiunile noastre ajutam
+          Pamantul sa fie un loc mai curat si mai verde. <br />
+          Astfel misiunea noastra este ajutam plantea si sa creem un mediu placut, natural, pentru noi
+          si viitoarele generatii.
+        </p>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="img-container">
+        <img src={placeholder} alt="Imagine" class="img" />
+        <label>Lorem ipsum dolor sit.</label>
+      </div>
+      <div class="img-container">
+        <img src={placeholder} alt="Imagine" class="img" />
+        <label>Lorem ipsum dolor sit.</label>
+      </div>
+      <div class="img-container">
+        <img src={placeholder} alt="Imagine" class="img" />
+        <label>Lorem ipsum dolor sit.</label>
+      </div>
+      <div class="img-container">
+        <img src={placeholder} alt="Imagine" class="img" />
+        <label>Lorem ipsum dolor sit.</label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid-of-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-2 {
+    margin-top: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .img-container label {
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+
+  .img {
+    width: 30rem;
+  }
+
+  @media (max-width: 1400px) {
+    .col-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .img {
+      width: 20rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .img {
+      width: 13rem;
+    }
+  }
+</style>

@@ -1,0 +1,119 @@
+<section class="section-organization">
+  <h2 class="section__title">Istoric si organizare</h2>
+  <div class="grid-of-2">
+    <div class="section-about__column-1">
+      <h3 class="sub-section__title">Istoric</h3>
+      <p class="paragraph">
+        Fundația Ecologică „Floare de Colț” a fost înființată în anul 1994, plecând de la 24 de
+        membri fondatori. În prezent organizația numără ... de membri. De-a lungul celor 28 de ani
+        de activitate, organizația a întreprins aproximativ 150 de acțiuni în scop ecologic la care
+        au particpiat peste 10.000 de tineri, toate acestea însumând 168.000 zile dedicate educației
+        ecologice. Numeroase personalități au participat și susținut proiectele noastre printre care
+        se numără miniștri, primari sau membri ai delegațiilor straine din Olanda și Marea Britanie.
+      </p>
+    </div>
+    <div class="section-about__column-2">
+      <h3 class="sub-section__title">Organizare</h3>
+      <p class="paragraph">
+        Fundația „Floare de colț” este o organizație independentă cu caracter ecologic,
+        cultural-științific, sportiv și moral-civic. Conducerea operativă este asigurată de un Birou
+        Executiv alcătuit din trei membri aleși din 5 în 5 ani.
+      </p>
+      <ul class="list">
+        <h4 class="heading">Componența Biroului Executiv:</h4>
+        <li class="list-item">
+          Stoinea Petre (
+          <span class="position">Presedinte</span>)
+        </li>
+        <li class="list-item">
+          Stoinea Rodica (<span class="position">Vicepresedinte</span>)
+        </li>
+        <li class="list-item">
+          Alniței Elena-Silvia (<span class="position">Membru</span>)
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row-of-3">
+    <a href="#" class="btn-page">Act Înregistrare</a>
+    <a href="#" class="btn-page">Regulament</a>
+    <a href="#" class="btn-page">Alegere Conducere</a>
+  </div>
+</section>
+
+<style>
+  .grid-of-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .row-of-3 {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+
+  .heading {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .list-item {
+    font-size: 1.5rem;
+  }
+
+  .position {
+    font-size: 1.3rem;
+  }
+
+  .btn-page {
+    background-color: var(--color-button);
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    background-color: $color-button;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.4);
+    transition: all 0.4s;
+    text-align: center;
+  }
+  .btn-page:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 4rem rgba(var(--color-black), 0.4);
+  }
+
+  .btn-page:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 900px) {
+    .grid-of-2 {
+      grid-template-columns: 1fr;
+    }
+    .list {
+      margin-left: 0rem;
+    }
+
+    .btn-page {
+      padding: 0.5rem 1rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .row-of-3 {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

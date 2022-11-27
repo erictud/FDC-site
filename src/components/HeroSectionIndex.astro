@@ -1,0 +1,98 @@
+---
+import placeholder from "../images/placholder.jpg";
+---
+
+<div class="hero-section">
+  <h1 class="title"><span class="color">Fundatia</span> Ecologică Floare de Colt</h1>
+  <h3 class="moto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, aut.</h3>
+  <div class="image-gallery">
+    <img src={placeholder} alt="imagine" class="image" />
+    <img src={placeholder} alt="imagine" class="image" />
+    <img src={placeholder} alt="imagine" class="image" />
+  </div>
+  <button class="btn">Afla mai multe</button>
+</div>
+
+<style>
+  .hero-section {
+    margin-top: 8rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .title,
+  .color {
+    text-align: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    word-spacing: 0.5rem;
+  }
+
+  .color {
+    color: var(--color-primary) !important;
+  }
+
+  .moto {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  .btn {
+    padding: 1rem 4rem;
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .image-gallery {
+    width: 95vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-content: center;
+  }
+
+  .image {
+    width: 80%;
+  }
+
+  @media (max-width: 1200px) {
+    .title,
+    .color {
+      font-size: 3.5rem;
+    }
+
+    .moto {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .image:nth-child(3) {
+      display: none;
+    }
+
+    .image {
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .title,
+    .color {
+      font-size: 2.5rem;
+    }
+
+    .moto {
+      font-size: 1.3rem;
+    }
+  }
+</style>

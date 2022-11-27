@@ -1,0 +1,77 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  color: black;
+  background-color: var(--color-white-background);
+  position: fixed;
+  right: 1%;
+  top: 3%;
+  z-index: 15;
+  border-radius: 100%;
+}
+
+.btn svg {
+  width: 4rem;
+}
+
+.nav {
+  animation: fadeIn 0.5s ease;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  z-index: 10;
+  width: 30rem;
+  height: 100vh;
+  background-color: var(--color-secondary-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-items {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list-item {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-0.5rem);
+}
+
+.link {
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 560px) {
+  .btn svg {
+    width: 3rem;
+  }
+
+  .btn {
+    padding: 0.5rem;
+    top: 2%;
+  }
+}

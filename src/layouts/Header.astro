@@ -1,0 +1,144 @@
+---
+import logo from "../images/logo.png";
+import RO from "../images/romanianFlag.png";
+import US from "../images/usaFlag.png";
+import NavBar from "./NavBar";
+---
+
+<header class="header">
+  <div class="logo-container">
+    <a href="/">
+      <img src={logo} alt="Logo" />
+      <h1 class="title">
+        <span class="status">Fundația Ecologică</span>
+        <span class="name">„Floare de Colț”</span>
+      </h1>
+    </a>
+  </div>
+  <div class="container">
+    <div class="languages-row">
+      <button class="button">
+        <img class="button-img" src={RO} alt="Romanian Flag" />
+      </button>
+      <button class="button">
+        <img class="button-img" src={US} alt="Romanian Flag" />
+      </button>
+    </div>
+    <NavBar client:load />
+  </div>
+</header>
+
+<style>
+  .header {
+    display: flex;
+    padding: 1rem 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary);
+    padding-right: 7rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .logo-container a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .logo-container img {
+    width: 10rem;
+    height: auto;
+  }
+
+  .title {
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .status {
+    font-size: 1.7rem;
+  }
+
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .languages-row {
+    display: flex;
+    gap: 2rem;
+  }
+  .button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .button-img {
+    width: 3rem;
+    height: auto;
+  }
+
+  @media (max-width: 560px) {
+    .header {
+      padding-right: 5rem;
+    }
+
+    .logo-container img {
+      width: 6rem;
+    }
+
+    .status {
+      font-size: 1.3rem;
+    }
+
+    .name {
+      font-size: 1.8rem;
+    }
+
+    .button-img {
+      width: 2rem;
+    }
+  }
+
+  @media (max-width: 385px) {
+    .status {
+      font-size: 1.1rem;
+    }
+
+    .name {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 385px) {
+    .logo-container img {
+      width: 4rem;
+    }
+
+    .status {
+      font-size: 0.9rem;
+    }
+
+    .name {
+      font-size: 1.2rem;
+    }
+  }
+</style>
