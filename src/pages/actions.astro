@@ -1,0 +1,59 @@
+---
+import HeroSectionSecondaryPage from "../components/HeroSectionSecondaryPage.astro";
+import ImageSlider from "../components/ImageSlider";
+import ProjectNumbers from "../components/projects/ProjectNumbers.astro";
+import ProjectsInProgress from "../components/projects/ProjectsInProgress.astro";
+import TypesOfActions from "../components/projects/TypesOfActions.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Proiecte ale FDC">
+  <HeroSectionSecondaryPage
+    title="Acțiunile noastre"
+    description="Proiecte desfasurate de Fundatia ecologica Floare de Colt"
+  />
+  <div class="container">
+    <ProjectNumbers />
+    <TypesOfActions />
+    <ProjectsInProgress />
+    <ImageSlider client:load />
+    <!-- <div class="total">
+      <h3 class="sub-section__title">Mai multe informatii:</h3>
+      <a href="/" class="btn">Lista cu toate actiunile</a>
+    </div> -->
+  </div>
+</Layout>
+
+<style>
+  .container {
+    padding: 2rem;
+  }
+
+  .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .btn {
+    background-color: var(--color-button);
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    background-color: $color-button;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.4);
+    transition: all 0.4s;
+    text-align: center;
+    cursor: pointer;
+  }
+  .btn:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 4rem rgba(var(--color-black), 0.4);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+  }
+</style>

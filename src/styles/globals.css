@@ -1,6 +1,6 @@
 :root {
   --color-primary: #5f8d4e;
-  --color-secondary: #a4be7b;
+  --color-secondary: rgb(164, 190, 123);
   --color-secondary-background: rgb(40, 84, 48, 0.99);
   --color-tertiary: rgb(40, 84, 48);
   --color-fourth: #e5d9b6;
@@ -54,6 +54,8 @@ a {
 
 p {
   margin: 1rem 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 ul {
@@ -80,8 +82,7 @@ h3 {
 }
 
 .section__title {
-  display: inline-block;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   -webkit-background-clip: text;
   color: transparent;

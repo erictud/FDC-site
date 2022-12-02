@@ -1,0 +1,89 @@
+---
+import placeholder from "../../images/placholder.jpg";
+
+export interface Props {
+  image: string;
+  title: string;
+  excrept: string;
+  author: string;
+  date: string;
+  slug: string;
+}
+
+const { image, title, excrept, author, date, slug } = Astro.props as Props;
+---
+
+<article class="container">
+  <div class="img-container">
+    <img src={`/posts/images/${slug}.jpg`} alt={title} />
+  </div>
+  <a href={`/${slug}`}>
+    <div class="article">
+      <h4 class="title">{title}</h4>
+      <p class="excrept">
+        {excrept}
+      </p>
+      <div class="more-info">
+        <p class="author">By {author}</p>
+        <p class="date">{new Date(date).toLocaleString()}</p>
+      </div>
+    </div>
+  </a>
+</article>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .img-container {
+    align-self: center;
+  }
+
+  .img-container img {
+    width: 15rem;
+  }
+
+  .article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .excrept {
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+
+  .more-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+  }
+
+  @media (max-width: 550px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .img-container img {
+      width: 100%;
+    }
+
+    .title {
+      text-align: center;
+    }
+  }
+</style>

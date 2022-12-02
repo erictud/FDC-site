@@ -1,0 +1,96 @@
+---
+import placeholder from "../../images/placholder.jpg";
+---
+
+<section>
+  <h3 class="sub-section__title">Actiuni in desfasurare</h3>
+  <div class="container">
+    <h3 class="title">Lorem, ipsum.</h3>
+    <p class="paragraph">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, eos. Nisi dignissimos
+      doloribus enim distinctio repellendus suscipit cupiditate in, omnis, quos minima expedita.
+      Illo ipsam veritatis velit vel excepturi eum eveniet rem vero, ipsum ea expedita nihil!
+      Exercitationem, aut tempora deserunt impedit ipsam repellat illo iure quis praesentium? Alias,
+      enim dolore impedit doloremque est esse ipsa voluptatum ducimus fuga, quidem odit amet nihil
+      rerum consequuntur? Numquam necessitatibus perspiciatis tenetur corrupti incidunt nam? Cum
+      obcaecati qui delectus, perferendis suscipit reprehenderit amet voluptatum excepturi magnam
+      doloremque illum sequi? Iusto esse cumque fuga natus amet rem tenetur, dignissimos, eum, eius
+      illo ipsam perspiciatis!
+    </p>
+    <div class="grid-of-3">
+      <div class="img-container">
+        <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="img-container">
+        <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="img-container">
+        <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <h3 class="title">Lorem, ipsum.</h3>
+    <p class="paragraph">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, eos. Nisi dignissimos
+      doloribus enim distinctio repellendus suscipit cupiditate in, omnis, quos minima expedita.
+      Illo ipsam veritatis velit vel excepturi eum eveniet rem vero, ipsum ea expedita nihil!
+      Exercitationem, aut tempora deserunt impedit ipsam repellat illo iure quis praesentium? Alias,
+      enim dolore impedit doloremque est esse ipsa voluptatum ducimus fuga, quidem odit amet nihil
+      rerum consequuntur? Numquam necessitatibus perspiciatis tenetur corrupti incidunt nam? Cum
+      obcaecati qui delectus, perferendis suscipit reprehenderit amet voluptatum excepturi magnam
+      doloremque illum sequi? Iusto esse cumque fuga natus amet rem tenetur, dignissimos, eum, eius
+      illo ipsam perspiciatis!
+    </p>
+  </div>
+</section>
+
+<style>
+  .container {
+    margin: 2rem 0;
+  }
+  .section-activites__image {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  @media (max-width: 500px) {
+    .section-activites__image {
+      width: 100%;
+    }
+  }
+  .section-activites__caption {
+    display: block;
+
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .grid-of-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2rem 0;
+  }
+  @media (max-width: 500px) {
+    .grid-of-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--color-heading-4th);
+  }
+
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob("/posts/*.md");
+  return posts.map((post) => ({
+    params: {
+      slug: post.frontmatter.slug,
+    },
+    props: {
+      post,
+    },
+  }));
+}
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<Layout title={frontmatter.title}>
+  <section class="article">
+    <a href="/blog" class="btn">&larr;</a>
+    <div class="container">
+      <h2 class="sub-section__title">{frontmatter.title}</h2>
+      <img src={`/posts/images/${frontmatter.slug}.jpg`} alt={frontmatter.title} />
+    </div>
+    <div class="info-row">
+      <p class="date">{frontmatter.date}</p>
+      <p class="author">Articol scris de {frontmatter.author}</p>
+    </div>
+    <Content />
+  </section>
+</Layout>
+
+<style>
+  .article {
+    padding: 4rem 2rem;
+    position: relative;
+  }
+
+  .btn {
+    position: absolute;
+    top: 0%;
+    left: 1%;
+    font-size: 2rem;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .container img {
+    width: 30%;
+  }
+
+  .container h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .info-row p {
+    color: var(--text-color);
+    font-size: 1.5rem;
+  }
+
+  .article p {
+    font-size: 1.4rem !important;
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .container img {
+      width: 60%;
+    }
+
+    .container h2 {
+      font-size: 2.5rem;
+    }
+  }
+</style>

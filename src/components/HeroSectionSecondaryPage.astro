@@ -1,0 +1,75 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props as Props;
+---
+
+<div class="hero-section">
+  <h2 class="name">{title}</h2>
+  <h4>{description}</h4>
+</div>
+
+<style>
+  .hero-section {
+    width: 100vw;
+    height: 40vh;
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+      url("/src/images/blogHeader.jpg");
+    background-position: center;
+  }
+
+  .name {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    animation: FadeLeft 1s ease;
+  }
+
+  .hero-section h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fff;
+    animation: FadeRight 1s ease;
+  }
+
+  @media (max-width: 900px) {
+    .name {
+      font-size: 3rem;
+    }
+
+    .hero-section h4 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @keyframes FadeLeft {
+    from {
+      transform: translateX(-20rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0rem);
+      opacity: 1;
+    }
+  }
+
+  @keyframes FadeRight {
+    from {
+      transform: translateX(20rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0rem);
+      opacity: 1;
+    }
+  }
+</style>

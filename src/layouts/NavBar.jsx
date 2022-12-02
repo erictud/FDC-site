@@ -25,17 +25,17 @@ export default function NavBar() {
         <nav className={styles.nav}>
           <ul className={styles["list-items"]}>
             <li className={styles["list-item"]}>
-              <a href="#" className={styles["link"]}>
+              <a href="/" className={styles["link"]}>
                 Acasa
               </a>
             </li>
             <li className={styles["list-item"]}>
-              <a href="#" className={styles["link"]}>
+              <a href="/actions" className={styles["link"]}>
                 Actiunile noastre
               </a>
             </li>
             <li className={styles["list-item"]}>
-              <a href="#" className={styles["link"]}>
+              <a href="/blog" className={styles["link"]}>
                 Blog
               </a>
             </li>

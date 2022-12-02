@@ -1,3 +1,7 @@
+<script>
+  const el = document.querySelector(".grid-of-2");
+</script>
+
 <section class="section-organization">
   <h2 class="section__title">Istoric si organizare</h2>
   <div class="grid-of-2">
@@ -42,6 +46,13 @@
 </section>
 
 <style>
+  [data-is-scrolling-bottom="true"].section-organization {
+    opacity: 0.5;
+  }
+
+  .section-organization {
+    margin: 4vh 0;
+  }
   .grid-of-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;

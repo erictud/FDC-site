@@ -1,7 +1,5 @@
 ---
 import logo from "../images/logo.png";
-import RO from "../images/romanianFlag.png";
-import US from "../images/usaFlag.png";
 import NavBar from "./NavBar";
 ---
 
@@ -15,17 +13,8 @@ import NavBar from "./NavBar";
       </h1>
     </a>
   </div>
-  <div class="container">
-    <div class="languages-row">
-      <button class="button">
-        <img class="button-img" src={RO} alt="Romanian Flag" />
-      </button>
-      <button class="button">
-        <img class="button-img" src={US} alt="Romanian Flag" />
-      </button>
-    </div>
-    <NavBar client:load />
-  </div>
+
+  <NavBar client:load />
 </header>
 
 <style>
@@ -76,21 +65,6 @@ import NavBar from "./NavBar";
     font-size: 2.2rem;
   }
 
-  .languages-row {
-    display: flex;
-    gap: 2rem;
-  }
-  .button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 2rem;
-  }
-
   .button-img {
     width: 3rem;
     height: auto;
@@ -115,30 +89,6 @@ import NavBar from "./NavBar";
 
     .button-img {
       width: 2rem;
-    }
-  }
-
-  @media (max-width: 385px) {
-    .status {
-      font-size: 1.1rem;
-    }
-
-    .name {
-      font-size: 1.5rem;
-    }
-  }
-
-  @media (max-width: 385px) {
-    .logo-container img {
-      width: 4rem;
-    }
-
-    .status {
-      font-size: 0.9rem;
-    }
-
-    .name {
-      font-size: 1.2rem;
     }
   }
 </style>

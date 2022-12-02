@@ -30,6 +30,7 @@ import placeholder from "../images/placholder.jpg";
     text-transform: uppercase;
     letter-spacing: 0.15rem;
     word-spacing: 0.5rem;
+    animation: FadeRight 2s ease;
   }
 
   .color {
@@ -40,6 +41,7 @@ import placeholder from "../images/placholder.jpg";
     font-size: 2rem;
     color: var(--text-color);
     text-align: center;
+    animation: FadeRight 2s ease;
   }
 
   .btn {
@@ -62,6 +64,14 @@ import placeholder from "../images/placholder.jpg";
 
   .image {
     width: 80%;
+    transition: all 0.3s ease;
+    animation: FadeLeft 2s ease;
+  }
+
+  .image:hover,
+  .image:active {
+    transform: scale(1.05);
+    border-radius: 1rem;
   }
 
   @media (max-width: 1200px) {
@@ -93,6 +103,28 @@ import placeholder from "../images/placholder.jpg";
 
     .moto {
       font-size: 1.3rem;
+    }
+  }
+
+  @keyframes FadeLeft {
+    from {
+      transform: translateX(-20rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0rem);
+      opacity: 1;
+    }
+  }
+
+  @keyframes FadeRight {
+    from {
+      transform: translateX(20rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0rem);
+      opacity: 1;
     }
   }
 </style>
