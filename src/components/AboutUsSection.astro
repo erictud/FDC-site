@@ -2,11 +2,25 @@
 import placeholder from "../images/placholder.jpg";
 ---
 
+<script>
+  const hiddenEl = document.querySelectorAll(".hidden");
+  const hiddenElR = document.querySelector(".hidden-r");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  });
+
+  observer.observe(hiddenElR);
+  hiddenEl.forEach((el) => observer.observe(el));
+</script>
+
 <section class="section-about">
   <h2 class="section__title">Despre noi</h2>
   <div class="grid-of-2">
     <div class="col-1">
-      <div>
+      <div class="hidden">
         <h3 class="sub-section__title">Cine suntem</h3>
         <p class="paragraph">
           “Floare de colt” este o fundatie ecologica infintata in cadrul Colegiului National “Mihai
@@ -18,7 +32,7 @@ import placeholder from "../images/placholder.jpg";
           ajutarea copiilor ucrainieni care invata in incinta liceului.
         </p>
       </div>
-      <div>
+      <div class="hidden-r">
         <h3 class="sub-section__title">Misiunea noastră</h3>
         <p class="paragraph">
           Scopul nostru este sa aducem elevii si adolescentii mai aproape de natura, prin diferitele
@@ -33,19 +47,19 @@ import placeholder from "../images/placholder.jpg";
       </div>
     </div>
     <div class="col-2">
-      <div class="img-container">
+      <div class="img-container hidden">
         <img src={placeholder} alt="Imagine" class="img" />
         <label>Lorem ipsum dolor sit.</label>
       </div>
-      <div class="img-container">
+      <div class="img-container hidden">
         <img src={placeholder} alt="Imagine" class="img" />
         <label>Lorem ipsum dolor sit.</label>
       </div>
-      <div class="img-container">
+      <div class="img-container hidden">
         <img src={placeholder} alt="Imagine" class="img" />
         <label>Lorem ipsum dolor sit.</label>
       </div>
-      <div class="img-container">
+      <div class="img-container hidden">
         <img src={placeholder} alt="Imagine" class="img" />
         <label>Lorem ipsum dolor sit.</label>
       </div>
@@ -73,6 +87,18 @@ import placeholder from "../images/placholder.jpg";
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  .img-container:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+
+  .img-container:nth-child(3) {
+    transition-delay: 0.8s;
+  }
+
+  .img-container:nth-child(4) {
+    transition-delay: 1.2s;
   }
 
   .img-container label {

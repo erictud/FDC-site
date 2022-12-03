@@ -2,14 +2,29 @@
 import placeholder from "../../images/placholder.jpg";
 ---
 
+<script>
+  const el = document.querySelectorAll(".hidden-img");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show-img");
+      } else {
+        entry.target.classList.remove("show-img");
+      }
+    });
+  });
+  el.forEach((els) => observer.observe(els));
+</script>
+
 <section>
   <h3 class="sub-section__title">Tipuri de actiuni intreprinse</h3>
   <div class="types-section">
     <div class="grid-1-of-2-odd">
-      <div class="image-container">
+      <article class="image-container hidden-img">
         <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
         <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
-      </div>
+      </article>
       <div>
         <h3 class="title">Ecologizare</h3>
         <ul class="activities__list">
@@ -37,7 +52,7 @@ import placeholder from "../../images/placholder.jpg";
       </div>
     </div>
     <div class="grid-1-of-2-odd">
-      <div class="image-container">
+      <div class="image-container hidden-img">
         <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
         <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
       </div>
@@ -67,7 +82,7 @@ import placeholder from "../../images/placholder.jpg";
       </div>
     </div>
     <div class="grid-1-of-2-odd">
-      <div class="image-container">
+      <div class="image-container hidden-img">
         <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
         <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
       </div>
@@ -105,6 +120,17 @@ import placeholder from "../../images/placholder.jpg";
       grid-template-columns: 1.25fr 1.75fr;
       gap: 10rem;
       margin-top: 5rem;
+    }
+
+    .hidden-img {
+      transform: translateX(0%) scale(0.5);
+      filter: blur(5px);
+      transition: all 0.5s ease;
+    }
+
+    .show-img {
+      transform: translateX(0) scale(1);
+      filter: blur(0px);
     }
     @media (max-width: 900px) {
       .grid-1-of-2-odd {

@@ -113,3 +113,25 @@ h3 {
     font-size: 1.5rem;
   }
 }
+
+/* ANIMATIONS */
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  filter: blur(5px);
+  transition: all 1s ease;
+}
+
+.hidden-r {
+  opacity: 0;
+  transform: translateX(100%);
+  filter: blur(5px);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0px);
+}

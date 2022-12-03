@@ -4,24 +4,39 @@ import DaysIcon from "../../icons/DaysIcon";
 import PersonIcon from "../../icons/PersonIcon";
 ---
 
+<script>
+  const hiddenEl = document.querySelectorAll(".hidden");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.disconnect();
+      }
+    });
+  });
+
+  hiddenEl.forEach((el) => observer.observe(el));
+</script>
+
 <div class="container">
   <h2 class="section__title">Actiunile noastre</h2>
   <div class="numbers-row">
-    <div class="item">
+    <div class="item hidden">
       <div class="svg">
         <ChartIcon />
       </div>
       <h2 class="item-title">Numar actiuni de educatie ecologica intreprinse</h2>
       <h3 class="number">146</h3>
     </div>
-    <div class="item">
+    <div class="item hidden">
       <div class="svg">
         <DaysIcon />
       </div>
       <h2 class="item-title">Numar zile-om dedicate educatiei ecologice</h2>
       <h3 class="number">168.018</h3>
     </div>
-    <div class="item">
+    <div class="item hidden">
       <div class="svg">
         <PersonIcon />
       </div>
@@ -56,6 +71,14 @@ import PersonIcon from "../../icons/PersonIcon";
     justify-content: center;
     align-items: center;
     gap: 2rem;
+  }
+
+  .item:nth-child(2) {
+    transition-delay: 0.5s;
+  }
+
+  .item:nth-child(3) {
+    transition-delay: 1s;
   }
 
   .svg {

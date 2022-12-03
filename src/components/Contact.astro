@@ -1,0 +1,75 @@
+---
+import MailIcon from "../icons/MailIcon";
+import SocialIcon from "../icons/SocialIcon";
+---
+
+<div class="contact-info">
+  <h2 class="section__title">Date de contact</h2>
+  <div class="contact-row">
+    <div class="contact-item">
+      <div class="svg">
+        <MailIcon />
+      </div>
+      <h3>Email</h3>
+      <p>contact@fdc.com</p>
+    </div>
+    <div class="contact-item">
+      <div class="svg">
+        <SocialIcon />
+      </div>
+      <h3>Social Media</h3>
+      <div class="sm-row">
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">Facebook</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .contact-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .svg {
+    width: 4rem;
+  }
+
+  .contact-item h3 {
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .sm-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .sm-row a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+  }
+
+  @media (max-width: 600px) {
+    .contact-row {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

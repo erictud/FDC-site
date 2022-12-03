@@ -39,11 +39,6 @@ export default function NavBar() {
                 Blog
               </a>
             </li>
-            <li className={styles["list-item"]}>
-              <a href="#" className={styles["link"]}>
-                Contact
-              </a>
-            </li>
           </ul>
         </nav>
       )}
