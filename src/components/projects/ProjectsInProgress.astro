@@ -1,61 +1,45 @@
 ---
 import placeholder from "../../images/placholder.jpg";
+import img1 from "../../../src/images/caseDeReabilitat.jpg";
+import img2 from "../../../src/images/caseDeReabilitat.2jpg.jpg";
+import img3 from "../../../src/images/reciclare1.jpg";
 ---
 
-<script>
-  const hiddenEl = document.querySelectorAll(".hidden");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
-
-  hiddenEl.forEach((el) => observer.observe(el));
-</script>
-
 <section>
-  <h3 class="sub-section__title">Actiuni in desfasurare</h3>
+  <h3 class="sub-section__title">Actiuni recente</h3>
   <div class="container">
-    <h3 class="title">Lorem, ipsum.</h3>
+    <h3 class="title">Reabilitarea unor case din zone defavorizate</h3>
     <p class="paragraph">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, eos. Nisi dignissimos
-      doloribus enim distinctio repellendus suscipit cupiditate in, omnis, quos minima expedita.
-      Illo ipsam veritatis velit vel excepturi eum eveniet rem vero, ipsum ea expedita nihil!
-      Exercitationem, aut tempora deserunt impedit ipsam repellat illo iure quis praesentium? Alias,
-      enim dolore impedit doloremque est esse ipsa voluptatum ducimus fuga, quidem odit amet nihil
-      rerum consequuntur? Numquam necessitatibus perspiciatis tenetur corrupti incidunt nam? Cum
-      obcaecati qui delectus, perferendis suscipit reprehenderit amet voluptatum excepturi magnam
-      doloremque illum sequi? Iusto esse cumque fuga natus amet rem tenetur, dignissimos, eum, eius
-      illo ipsam perspiciatis!
+      Reabilitarea unor case vechi din Jud. Valcea situate în zone defavorizate unde se constată un
+      exod de populație și îmbătrânirea populației rămase. Mod de implementare - reabilitarea
+      spațiilor de locuință în care membrii fundației să poată fi cazați în condiții decente
+      (instalație electrică conformă, reabilitarea/igienizarea spațiilor interioare/grupurilor
+      sanitare). Aceasta actiune este realizată cu ajutorul partenerilor nostri, Avi Prod Group Srl.
+      <br /> Scop - revitalizarea zonelor participante în proiect și implicare tinerilor în proces
     </p>
     <div class="grid-of-3">
-      <div class="img-container hidden">
-        <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
-        <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
+      <div class="img-container">
+        <img src={img1} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">Stare curenta a caselor</p>
       </div>
-      <div class="img-container hidden">
-        <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
-        <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
+      <div class="img-container">
+        <img src={img2} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">Stare curenta a caselor</p>
       </div>
-      <div class="img-container hidden">
-        <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
-        <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
+      <div class="img-container">
+        <img src={img3} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">Sticle reciclate</p>
       </div>
     </div>
-    <h3 class="title">Lorem, ipsum.</h3>
+    <h3 class="title">Reciclăm pentru educație</h3>
     <p class="paragraph">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, eos. Nisi dignissimos
-      doloribus enim distinctio repellendus suscipit cupiditate in, omnis, quos minima expedita.
-      Illo ipsam veritatis velit vel excepturi eum eveniet rem vero, ipsum ea expedita nihil!
-      Exercitationem, aut tempora deserunt impedit ipsam repellat illo iure quis praesentium? Alias,
-      enim dolore impedit doloremque est esse ipsa voluptatum ducimus fuga, quidem odit amet nihil
-      rerum consequuntur? Numquam necessitatibus perspiciatis tenetur corrupti incidunt nam? Cum
-      obcaecati qui delectus, perferendis suscipit reprehenderit amet voluptatum excepturi magnam
-      doloremque illum sequi? Iusto esse cumque fuga natus amet rem tenetur, dignissimos, eum, eius
-      illo ipsam perspiciatis!
+      Cu ajutorul partenorilor noștri (Metaminds) am organizat o acțiune de colectare selectivă a
+      deșeurilor (plastic,hartie,sticla,aluminiu,baterii etc.). În urma colectării, deșeurile au
+      fost depuse la centre de reciclare și transformate în puncte. Cu ajutorul punctelor au fost
+      achiziționate 79 de tablete pentru Școala Gimnazială Scorțoasa din județul Buzău și 17
+      laptopuri pentru Colegiul Național „Mihai Viteazul”, București. <br /> Acțiunea la care au participat
+      139 de elevi a fost premiată de Comunity Index Magazine, secțiunea „Educație pentru elevi”, locul
+      I (Gold), Reciclez pentru educație, nu doar pentru natură.
     </p>
   </div>
 </section>
@@ -108,11 +92,7 @@ import placeholder from "../../images/placholder.jpg";
     justify-content: center;
   }
 
-  .img-container:nth-child(2) {
-    transition-delay: 0.5s;
-  }
-
-  .img-container:nth-child(3) {
-    transition-delay: 1s;
+  .img-container img {
+    max-height: 30rem;
   }
 </style>

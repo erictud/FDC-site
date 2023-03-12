@@ -5,10 +5,12 @@ import ProjectNumbers from "../components/projects/ProjectNumbers.astro";
 import ProjectsInProgress from "../components/projects/ProjectsInProgress.astro";
 import TypesOfActions from "../components/projects/TypesOfActions.astro";
 import Layout from "../layouts/Layout.astro";
+import banner from "/about-page/banner.jpg";
 ---
 
 <Layout title="Proiecte ale FDC">
   <HeroSectionSecondaryPage
+    url={banner}
     title="Acțiunile noastre"
     description="Proiecte desfasurate de Fundatia ecologica Floare de Colt"
   />
@@ -16,7 +18,36 @@ import Layout from "../layouts/Layout.astro";
     <ProjectNumbers />
     <TypesOfActions />
     <ProjectsInProgress />
-    <ImageSlider client:load />
+    <ImageSlider
+      title="Galerie imagini"
+      client:load
+      imageArray={[
+        {
+          link: "/img-slider/img1.jpg",
+          caption: "Amenajarea Cascadei Tamina, 1996",
+        },
+        {
+          link: "/img-slider/img2.jpg",
+          caption: "Santier ecologic Jepii Mari, 1997",
+        },
+        {
+          link: "/img-slider/img3.jpg",
+          caption: "Ecologizare Piatra Craiului, 2001",
+        },
+        {
+          link: "/img-slider/img4.jpg",
+          caption: "Santier ecologic Parcul National Retezat, 2000",
+        },
+        {
+          link: "/img-slider/img5.jpg",
+          caption: "Actiuni de ecologizare Apuseni, 2006",
+        },
+        {
+          link: "/img-slider/img6.jpg",
+          caption: "Parcul National Calimani, 2007",
+        },
+      ]}
+    />
     <!-- <div class="total">
       <h3 class="sub-section__title">Mai multe informatii:</h3>
       <a href="/" class="btn">Lista cu toate actiunile</a>

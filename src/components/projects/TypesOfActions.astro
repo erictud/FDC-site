@@ -1,5 +1,8 @@
 ---
 import placeholder from "../../images/placholder.jpg";
+import eco from "/about-page/eco.jpg";
+import rec from "/about-page/rec.jpg";
+import tab from "/about-page/tab.jpg";
 ---
 
 <script>
@@ -22,8 +25,10 @@ import placeholder from "../../images/placholder.jpg";
   <div class="types-section">
     <div class="grid-1-of-2-odd">
       <article class="image-container hidden-img">
-        <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
-        <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
+        <img src={eco} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">
+          Actiuni de amenajare a Parcului National Cozia, 1999
+        </p>
       </article>
       <div>
         <h3 class="title">Ecologizare</h3>
@@ -53,8 +58,8 @@ import placeholder from "../../images/placholder.jpg";
     </div>
     <div class="grid-1-of-2-odd">
       <div class="image-container hidden-img">
-        <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
-        <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
+        <img src={rec} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">Parcul National Calimani, 2007</p>
       </div>
       <div>
         <h3 class="title">Reciclare</h3>
@@ -83,8 +88,8 @@ import placeholder from "../../images/placholder.jpg";
     </div>
     <div class="grid-1-of-2-odd">
       <div class="image-container hidden-img">
-        <img src={placeholder} alt="Actiune de ecologizare" class="section-activites__image" />
-        <p class="section-activites__caption">Lorem ipsum dolor sit amet.</p>
+        <img src={tab} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">Parcul National Muntii Rodnei, 2009</p>
       </div>
       <div>
         <h3 class="title">Tabere</h3>
@@ -112,86 +117,114 @@ import placeholder from "../../images/placholder.jpg";
         </ul>
       </div>
     </div>
-  </div>
+    <div class="grid-1-of-2-odd">
+      <div class="image-container hidden-img">
+        <img src={tab} alt="Actiune de ecologizare" class="section-activites__image" />
+        <p class="section-activites__caption">Parcul National Muntii Rodnei, 2009</p>
+      </div>
+      <div>
+        <h3 class="title">Expoziții</h3>
+        <ul class="activities__list">
+          <li class="activities__item">
+            <span class="status">Cea mai veche:</span>
+            Expozitia “Omul si mediul înconjurator” organizata pe cinci sectiuni:gradinita, cls.I-IV,
+            cls.V- VIII, cls. IX-XII si foto.Vernisajul a avut loc în holul liceului “Mihai Viteazul”,
+            acordându-se 17 premii în valoare de 500.000 lei. Au participat 317 elevi din sectoarele
+            1, 2, 3 si 4 în perioada 8-13.01.1996
+          </li>
+          <li class="activities__item">
+            <span class="status">Cea mai populară:</span> Editia a treia a expozitiei “Omul si mediul
+            înconjurator” a fost prezentata la Romexpo în pav. B, cu ocazia expozitiei internationale
+            “Sanatatea Terrei” si a zilei Pamântului. Au participat 400 de tineri, fiind selectionate
+            171 de lucrări.
+          </li>
+          <li class="activities__item">
+            <span class="status">Cea mai nouă:</span> Expoziția aniversară „20 de ani - Floare de Colt”.
+            Aceasta s-a desfășurat pe 8.11.2015
+          </li>
+        </ul>
+      </div>
+    </div>
 
-  <style>
-    .grid-1-of-2-odd {
-      display: grid;
-      grid-template-columns: 1.25fr 1.75fr;
-      gap: 10rem;
-      margin-top: 5rem;
-    }
-
-    .hidden-img {
-      transform: translateX(0%) scale(0.5);
-      filter: blur(5px);
-      transition: all 0.5s ease;
-    }
-
-    .show-img {
-      transform: translateX(0) scale(1);
-      filter: blur(0px);
-    }
-    @media (max-width: 900px) {
+    <style>
       .grid-1-of-2-odd {
-        grid-template-columns: 1fr;
-        gap: 0rem;
+        display: grid;
+        grid-template-columns: 1.25fr 1.75fr;
+        gap: 10rem;
+        margin-top: 5rem;
       }
-    }
 
-    .activities__list {
-      list-style: square;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+      .hidden-img {
+        transform: translateX(0%) scale(0.5);
+        filter: blur(5px);
+        transition: all 0.5s ease;
+      }
 
-    .title {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.2rem;
-      color: var(--color-heading-4th);
-    }
+      .show-img {
+        transform: translateX(0) scale(1);
+        filter: blur(0px);
+      }
+      @media (max-width: 900px) {
+        .grid-1-of-2-odd {
+          grid-template-columns: 1fr;
+          gap: 0rem;
+        }
+      }
 
-    .activities__item {
-      font-size: 1.5rem;
-      color: #5f5f5f;
-    }
-    .activities__item:not(:last-child) {
-      margin-bottom: 0.5rem;
-    }
+      .activities__list {
+        list-style: square;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    .status {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: black;
-    }
+      .title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        color: var(--color-heading-4th);
+      }
 
-    .image-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+      .activities__item {
+        font-size: 1.5rem;
+        color: #5f5f5f;
+      }
+      .activities__item:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
 
-    .section-activites__image {
-      display: block;
-      width: 80%;
-      margin: 0 auto;
-    }
-    @media (max-width: 900px) {
+      .status {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: black;
+      }
+
+      .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
       .section-activites__image {
-        width: 100%;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
       }
-    }
-    .section-activites__caption {
-      display: block;
-      color: var(--text-color);
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
-  </style>
+      @media (max-width: 900px) {
+        .section-activites__image {
+          width: 100%;
+        }
+      }
+      .section-activites__caption {
+        display: block;
+        color: var(--text-color);
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+    </style>
+  </div>
 </section>

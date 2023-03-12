@@ -1,5 +1,5 @@
 ---
-title: 2022 - a crazy year for FDC
+title: Bilant an 2022
 excrept: Bilant anual al Fundatiei ecologice FDC
 date: 2022-12-9
 slug: introduction

@@ -1,22 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/ImageSlider.module.css";
 
-const imageArray = [
-  {
-    link: "/images/slider/imagine1.jpg",
-    caption: "caption 1",
-  },
-  {
-    link: "/images/slider/imagine1.jpg",
-    caption: "caption 2",
-  },
-  {
-    link: "/images/slider/imagine1.jpg",
-    caption: "caption 3",
-  },
-];
-
-export default function ImageSlider() {
+export default function ImageSlider({ imageArray, title }) {
   const [imageNumber, setImageNumber] = useState(0);
 
   const decreaseImg = function () {
@@ -29,18 +14,26 @@ export default function ImageSlider() {
 
   return (
     <div className={styles["image-slider"]}>
-      <h3 className="sub-section__title">Galerie imagini</h3>
+      <h3 className="sub-section__title">{title}</h3>
       <div className={styles["image-container"]}>
-        <button onClick={decreaseImg} className={styles["l-btn"]}>
-          &larr;
-        </button>
+        {imageNumber > 0 && (
+          <button onClick={decreaseImg} className={styles["l-btn"]}>
+            &larr;
+          </button>
+        )}
         <div className={styles.container}>
-          <img src={imageArray[imageNumber].link} alt="" className={styles.img} />
+          <img
+            src={imageArray[imageNumber].link}
+            alt={imageArray[imageNumber].caption}
+            className={styles.img}
+          />
           <p className={styles.caption}>{imageArray[imageNumber].caption}</p>
         </div>
-        <button onClick={increaseImg} className={styles["r-btn"]}>
-          &rarr;
-        </button>
+        {imageNumber < 5 && (
+          <button onClick={increaseImg} className={styles["r-btn"]}>
+            &rarr;
+          </button>
+        )}
       </div>
     </div>
   );

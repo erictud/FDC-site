@@ -1,10 +1,13 @@
 ---
 import placeholder from "../images/placholder.jpg";
+import img4 from "/main-page/img4.jpg";
+import img5 from "/main-page/img5.jpg";
+import img6 from "/main-page/img6.jpg";
+import img7 from "/main-page/img7.jpg";
 ---
 
 <script>
   const hiddenEl = document.querySelectorAll(".hidden");
-  const hiddenElR = document.querySelector(".hidden-r");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -12,7 +15,6 @@ import placeholder from "../images/placholder.jpg";
     });
   });
 
-  observer.observe(hiddenElR);
   hiddenEl.forEach((el) => observer.observe(el));
 </script>
 
@@ -20,7 +22,7 @@ import placeholder from "../images/placholder.jpg";
   <h2 class="section__title">Despre noi</h2>
   <div class="grid-of-2">
     <div class="col-1">
-      <div class="hidden">
+      <div class="">
         <h3 class="sub-section__title">Cine suntem</h3>
         <p class="paragraph">
           “Floare de colt” este o fundatie ecologica infintata in cadrul Colegiului National “Mihai
@@ -32,7 +34,7 @@ import placeholder from "../images/placholder.jpg";
           ajutarea copiilor ucrainieni care invata in incinta liceului.
         </p>
       </div>
-      <div class="hidden-r">
+      <div class="">
         <h3 class="sub-section__title">Misiunea noastră</h3>
         <p class="paragraph">
           Scopul nostru este sa aducem elevii si adolescentii mai aproape de natura, prin diferitele
@@ -48,20 +50,20 @@ import placeholder from "../images/placholder.jpg";
     </div>
     <div class="col-2">
       <div class="img-container hidden">
-        <img src={placeholder} alt="Imagine" class="img" />
-        <label>Lorem ipsum dolor sit.</label>
+        <img src={img4} alt="Imagine" class="img" />
+        <label>Membrii fundatiei</label>
       </div>
       <div class="img-container hidden">
-        <img src={placeholder} alt="Imagine" class="img" />
-        <label>Lorem ipsum dolor sit.</label>
+        <img src={img5} alt="Imagine" class="img" />
+        <label>Piatra Craiului, 2001</label>
       </div>
       <div class="img-container hidden">
-        <img src={placeholder} alt="Imagine" class="img" />
-        <label>Lorem ipsum dolor sit.</label>
+        <img src={img6} alt="Imagine" class="img" />
+        <label>Santierul ecologic Cozia, 1999</label>
       </div>
       <div class="img-container hidden">
-        <img src={placeholder} alt="Imagine" class="img" />
-        <label>Lorem ipsum dolor sit.</label>
+        <img src={img7} alt="Imagine" class="img" />
+        <label>Valea Caraimanului, 1998</label>
       </div>
     </div>
   </div>

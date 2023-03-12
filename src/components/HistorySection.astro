@@ -1,6 +1,8 @@
-<script>
-  const hiddenEl = document.querySelector(".hidden");
-</script>
+---
+import doc1 from "../../public/docs/ACT FONDARE.pdf";
+import doc2 from "../../public/docs/ALEGERI.pdf";
+import doc3 from "../../public/docs/STATUTUL FUNDAȚIEI ECOLOGICE NONPROFIT.pdf";
+---
 
 <section class="section-organization">
   <h2 class="section__title">Istoric si organizare</h2>
@@ -39,9 +41,9 @@
     </div>
   </div>
   <div class="row-of-3">
-    <a href="#" class="btn-page">Act Înregistrare</a>
-    <a href="#" class="btn-page">Regulament</a>
-    <a href="#" class="btn-page">Alegere Conducere</a>
+    <a href={doc1} class="btn-page">Act Înregistrare</a>
+    <a href={doc3} class="btn-page">Regulament</a>
+    <a href={doc2} class="btn-page">Alegere Conducere</a>
   </div>
 </section>
 

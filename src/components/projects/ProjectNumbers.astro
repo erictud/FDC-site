@@ -2,6 +2,8 @@
 import ChartIcon from "../../icons/ChartIcon";
 import DaysIcon from "../../icons/DaysIcon";
 import PersonIcon from "../../icons/PersonIcon";
+
+import actiuni from "../../../public/docs/activitatifdc1.pdf";
 ---
 
 <script>
@@ -44,6 +46,7 @@ import PersonIcon from "../../icons/PersonIcon";
       <h3 class="number">10.195</h3>
     </div>
   </div>
+  <a href={actiuni} class="btn-page">Lista actiuni</a>
 </div>
 
 <style>
@@ -96,6 +99,29 @@ import PersonIcon from "../../icons/PersonIcon";
     font-size: 2.8rem;
     font-family: "Anton", sans-serif;
     font-style: italic;
+  }
+
+  .btn-page {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--color-button);
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    background-color: $color-button;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.4);
+    transition: all 0.4s;
+    text-align: center;
+  }
+  .btn-page:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 4rem rgba(var(--color-black), 0.4);
+  }
+
+  .btn-page:active {
+    transform: translateY(0);
   }
 
   @media (max-width: 700px) {

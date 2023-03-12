@@ -3,7 +3,16 @@ import AboutUsSection from "../components/AboutUsSection.astro";
 import Contact from "../components/Contact.astro";
 import HeroSectionIndex from "../components/HeroSectionIndex.astro";
 import HistorySection from "../components/HistorySection.astro";
+import ImageSlider from "../components/ImageSlider";
 import Layout from "../layouts/Layout.astro";
+
+// URLS
+import img1 from "/images/press/img1.jpg";
+import img2 from "/images/press/img2.jpg";
+import img3 from "/images/press/img3.jpg";
+import img4 from "/images/press/img4.jpg";
+import img5 from "/images/press/img5.jpg";
+import img6 from "/images/press/img6.jpg";
 ---
 
 <Layout title="Fundatia ecologica floare de colt">
@@ -13,6 +22,36 @@ import Layout from "../layouts/Layout.astro";
       <AboutUsSection />
       <HistorySection />
       <Contact />
+      <ImageSlider
+        client:load
+        title="Apariții presă"
+        imageArray={[
+          {
+            link: img1,
+            caption: "Liceeni Noiembrie 1996",
+          },
+          {
+            link: img2,
+            caption: "România Liberă",
+          },
+          {
+            link: img3,
+            caption: "România Liberă, 28 noiembrie 1995",
+          },
+          {
+            link: img4,
+            caption: "România Liberă, 4 septembrie 1995",
+          },
+          {
+            link: img5,
+            caption: "România Liberă, 17 ianuarie 1996",
+          },
+          {
+            link: img6,
+            caption: "România Liberă",
+          },
+        ]}
+      />
     </div>
   </main>
 </Layout>

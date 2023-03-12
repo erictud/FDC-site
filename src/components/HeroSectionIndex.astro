@@ -1,14 +1,16 @@
 ---
-import placeholder from "../images/placholder.jpg";
+import img1 from "/main-page/img1.jpg";
+import img2 from "/main-page/img2.jpg";
+import img3 from "/main-page/img3.jpg";
 ---
 
 <div class="hero-section">
   <h1 class="title"><span class="color">Fundatia</span> Ecologică Floare de Colt</h1>
-  <h3 class="moto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, aut.</h3>
+  <!-- <h3 class="moto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, aut.</h3> -->
   <div class="image-gallery">
-    <img src={placeholder} alt="imagine" class="image" />
-    <img src={placeholder} alt="imagine" class="image" />
-    <img src={placeholder} alt="imagine" class="image" />
+    <img src={img1} alt="imagine" class="image" />
+    <img src={img2} alt="imagine" class="image" />
+    <img src={img3} alt="imagine" class="image" />
   </div>
   <button class="btn">Afla mai multe</button>
 </div>
@@ -16,7 +18,7 @@ import placeholder from "../images/placholder.jpg";
 <style>
   .hero-section {
     margin-top: 8rem;
-    width: 100vw;
+    width: 100;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -59,11 +61,13 @@ import placeholder from "../images/placholder.jpg";
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    justify-content: center;
     align-content: center;
   }
 
   .image {
-    width: 80%;
+    border-radius: 1rem;
+    width: 20%;
     transition: all 0.3s ease;
     animation: FadeLeft 2s ease;
   }
@@ -91,7 +95,7 @@ import placeholder from "../images/placholder.jpg";
     }
 
     .image {
-      width: 60%;
+      width: 30%;
     }
   }
 

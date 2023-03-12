@@ -2,6 +2,7 @@
 import ArticlesList from "../components/articles/ArticlesList.astro";
 import HeroSectionSecondaryPage from "../components/HeroSectionSecondaryPage.astro";
 import Layout from "../layouts/Layout.astro";
+import banner from "/blog-page/banner.jpg";
 ---
 
 <Layout title="FDC blog">
@@ -9,6 +10,7 @@ import Layout from "../layouts/Layout.astro";
     <HeroSectionSecondaryPage
       title="Floare de Colt - Blog"
       description="Afla cele mai noi informatii despre Floare de Colt"
+      url={banner}
     />
     <ArticlesList />
   </main>

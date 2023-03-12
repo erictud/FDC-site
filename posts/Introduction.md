@@ -1,9 +1,9 @@
 ---
-title: Introduction to our mission
-excrept: Find out about our projects, our desires and what we want to achieve
+title: Misiunea noastra
+excrept: Ut etiam sit amet nisl. Ut morbi tincidunt augue interdum velit. Dignissim cras tincidunt lobortis feugiat vivamus at augue. Feugiat nisl pretiu
 date: 2022-10-9
 slug: introduction
-author: Eric Tudorica
+author: Stoinea Petre
 ---
 
 Ut etiam sit amet nisl. Ut morbi tincidunt augue interdum velit. Dignissim cras tincidunt lobortis feugiat vivamus at augue. Feugiat nisl pretium fusce id velit ut. At auctor urna nunc id cursus metus aliquam. Turpis massa tincidunt dui ut ornare. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Id volutpat lacus laoreet non. Massa placerat duis ultricies lacus sed turpis tincidunt id aliquet. Ornare suspendisse sed nisi lacus sed. Integer quis auctor elit sed vulputate mi. Feugiat nisl pretium fusce id velit.
