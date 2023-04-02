@@ -7,7 +7,7 @@ const posts = await Astro.glob("/posts/*.md");
 <div class="row">
   <h3 class="section__title">Ultimele articole</h3>
   <ul class="articles-list">
-    {
+    <!-- {
       posts.map((post) => (
         <PostOverview
           date={post.frontmatter.date}
@@ -18,7 +18,8 @@ const posts = await Astro.glob("/posts/*.md");
           author={post.frontmatter.author}
         />
       ))
-    }
+    } -->
+    <p>Niciun articol deocamdată!</p>
   </ul>
 </div>
 
@@ -28,6 +29,11 @@ const posts = await Astro.glob("/posts/*.md");
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  p {
+    text-align: center;
+    font-size: 5rem;
   }
 
   .articles-list {
